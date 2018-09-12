@@ -1,1 +1,1 @@
-# react-testing
+# react-redux-testing
