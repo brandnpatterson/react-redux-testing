@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default () => {
+const CommentList = () => {
   return (
     <div>
       <h2>Comment List</h2>
     </div>
   );
 };
+
+export default CommentList;
