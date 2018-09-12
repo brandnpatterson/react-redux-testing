@@ -1,11 +1,16 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import CommentBox from 'components/CommentBox';
+import Store from '../Store';
+import CommentBox from '../components/CommentBox';
 
 let wrapped;
 
 beforeEach(() => {
-  wrapped = mount(<CommentBox />);
+  wrapped = mount(
+    <Store>
+      <CommentBox />
+    </Store>
+  );
 });
 
 // unmount when running full DOM test with 'mount'
