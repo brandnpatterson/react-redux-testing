@@ -7,6 +7,7 @@ describe('saveComment', () => {
 
     expect(action.type).toEqual(SAVE_COMMENT);
   });
+
   it('has correct payload', () => {
     const action = saveComment('New Comment');
 
