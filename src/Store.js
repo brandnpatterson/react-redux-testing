@@ -1,17 +1,16 @@
 import React from 'react';
 import { applyMiddleware, compose, createStore } from 'redux';
-import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import reducers from './reducers';
+import thunk from 'redux-thunk';
 
+import reducers from './reducers';
 const initialState = {};
 const middleware = [thunk];
-const devEnv = process.env.NODE_ENV === 'development';
 
 const store = createStore(
   reducers,
   initialState,
-  devEnv
+  process.env.NODE_ENV === 'development'
     ? compose(
         applyMiddleware(...middleware),
         window.__REDUX_DEVTOOLS_EXTENSION__ &&
