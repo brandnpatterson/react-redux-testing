@@ -45,8 +45,6 @@ class CommentBox extends Component {
   }
 }
 
-// const mapStateToProps = {};
-
 export default connect(
   null,
   { fetchComments, saveComment }
