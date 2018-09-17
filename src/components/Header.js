@@ -18,9 +18,11 @@ class Header extends Component {
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link to="/post">Post A Comment</Link>
-        </li>
+        {this.props.auth ? (
+          <li>
+            <Link to="/post">Post A Comment</Link>
+          </li>
+        ) : null}
         <li>
           <Button isLoggedIn={this.props.auth ? 'Sign Out' : 'Sign In'} />
         </li>
