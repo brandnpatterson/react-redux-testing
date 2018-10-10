@@ -1,10 +1,11 @@
 import React from 'react';
 import { applyMiddleware, compose, createStore } from 'redux';
 import { Provider } from 'react-redux';
-import reduxPromise from 'redux-promise';
-
+import async from './middlewares/async';
+import stateValidator from './middlewares/stateValidator';
 import reducers from './reducers';
-const middleware = [reduxPromise];
+
+const middleware = [async, stateValidator];
 
 const Store = ({ children, initialState = {} }) => {
   const store = createStore(
